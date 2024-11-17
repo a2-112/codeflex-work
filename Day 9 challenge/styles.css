@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* this code helps to push the container to the middle page */
+.main-con{
+    text-align: center;
+    padding: 10px;
+    background-color: wheat;
+    width: 100%;
+    margin: 2rem;
+    font-family: monospace;
+}
+.header{
+    background-color: fuchsia;
+    padding: 15px;
+    color: white;
+    width: auto;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+#nav{
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    width: 40%;
+    color: black;
+}
+#main-p{
+    background-color: rgb(33, 34, 36);
+    padding: 25px;
+    width: 60%;
+}
+.footer{
+    background-color: rgb(2, 38, 139);
+    color: white;
+    padding: 15px;
+}

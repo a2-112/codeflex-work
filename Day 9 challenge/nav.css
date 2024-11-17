@@ -1,0 +1,163 @@
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgb(8, 107, 124);
+    color: whitesmoke;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    width: 12rem;
+    position: relative
+}
+
+nav input {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+
+nav input:checked~ul {
+    background-color: black;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    visibility: visible;
+    padding: 2rem;
+    position: absolute;
+    top: 3.5rem; 
+    right: 0;
+    transform: translateX(0%);
+    border-radius: 10px;
+    box-shadow: 0 0 12px ;
+
+}
+
+nav input:checked~.toggle .toggle-bar:first-child {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+nav input:checked~.toggle .toggle-bar:last-child {
+    transform: rotate(-45deg) translate(8px, -8px);
+
+}
+
+nav input:checked~.toggle .toggle-bar:nth-child(2) {
+    transform: rotate(360deg);
+    opacity: 0;
+}
+
+ul {
+    position: absolute;
+    top: 1.5rem;
+    visibility: hidden;
+    transform: translateX(110%);
+    transition: .5s;
+    box-shadow: none;
+}
+
+li {
+    list-style: none;
+
+}
+li:hover a{
+    text-decoration: underline white;
+    color: rosybrown;
+}
+li a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    
+}
+
+.toggle .toggle-bar {
+    background-color: rosybrown;
+    width: 2rem;
+    height: 4px;
+    border-radius: 2px;
+    display: block;
+    transition: .5s;
+    z-index: 9;
+}
+
+@media (min-width: 768px) {
+    nav {
+
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 100%;
+        position: static;
+    }
+
+    nav input {
+        display: none;
+    }
+    nav input:checked ~ ul{
+        background-color: transparent;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: static;
+        top: 0;
+        box-shadow: none ;
+    }
+    .toggle{
+        display: none;
+    }
+    ul {
+        background-color: transparent;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        position: static;
+        flex-direction: row;
+        gap: 1rem;
+        visibility: visible;
+        transform: translateX(0%);
+        box-shadow: none ;
+    }
+    li a{
+        color: rgb(255, 255, 255);
+    }
+}
+@media screen and (max-width:600px) {
+    .toggle,.toggle-bar{
+        width: 9rem;
+    }
+}
