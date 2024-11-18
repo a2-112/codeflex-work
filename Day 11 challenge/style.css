@@ -1,0 +1,33 @@
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 180px 180px;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#grid-item-1{
+    background-color: deepskyblue;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#grid-item-2{
+    background-color: rgb(4, 38, 49);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#grid-item-3{
+    background-color: rgb(6, 82, 40);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#grid-item-4{
+    background-color: rgb(252, 101, 1);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
