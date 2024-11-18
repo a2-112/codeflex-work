@@ -1,4 +1,10 @@
-
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:auto;
+   height:100vh;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 180px 180px;
