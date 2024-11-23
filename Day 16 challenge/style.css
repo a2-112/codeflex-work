@@ -1,0 +1,47 @@
+.main-con{
+    height:100vh ;
+    place-content: center;
+}
+.content{
+    background-color: darkolivegreen;
+    font-family: sans-serif;
+    width: 60%;
+    place-content: center;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px rgb(53, 49, 49);
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+form{
+    padding: 10px;
+    text-align: center;
+}
+label{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+input{
+    width: 50%;
+    padding: 10px;
+    border: none;
+}
+button{
+    text-align: center;
+    border: none;
+    background-color: rgb(21, 29, 8);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    margin-top:5px ;
+}
+p{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
