@@ -5,9 +5,11 @@ function displaySum() {
     const sum1 =
         //parsefloat is used to parses/extract an argument from html to js and return a real number be it a string or decimal
         //doc.getEleId is used to reference an id in html and .value is used to extract value
-        parseFloat(document.getElementById("num").value)
+        //just doc.getEle can still do it parsefloat is mainly when the input is a text it 
+        //just tells it to convert it to a number.
+        document.getElementById("num").value;
     const sum2 =
-        parseFloat(document.getElementById('addNum').value)
+        document.getElementById('addNum').value;
     // if the input isn't a number then this line of code will display the enter a valid number
     //.innerhtml is used to send a message from Js to Html 
     if (isNaN(sum1) || isNaN(sum2)) {
