@@ -1,0 +1,21 @@
+body{
+    height: 100vh;
+    place-content: center;
+    text-align: center;
+}
+div{
+   border-bottom: 1px solid  rgb(82, 4, 65);
+   margin: auto;
+}
+h2{
+    color: rgb(82, 4, 65);
+    text-shadow: 1px 1px 1px black;
+}
+button{
+    border: none;
+    padding: 10px;
+    background-color: rgb(82, 4, 65);
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+}
