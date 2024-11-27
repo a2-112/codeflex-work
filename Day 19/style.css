@@ -1,0 +1,25 @@
+body{
+     height: 100vh;
+place-content: center;
+}
+div{
+border: 1px solid green;
+
+
+}
+.listItem{
+    display: block;
+}
+h2{
+    text-align: center;
+    color: green;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px gray;
+}
+ li{
+padding: 10px;
+border-bottom: 0.5px solid green;
+font-weight: bold;
+color: green;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
