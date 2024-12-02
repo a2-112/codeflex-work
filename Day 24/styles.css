@@ -1,0 +1,23 @@
+  body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            place-content: center;
+            height: 10vh;
+        }
+        h1{
+            text-align: center;
+        }
+
+        ul{
+             display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+        }
+      li{
+    list-style: none;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+      }
