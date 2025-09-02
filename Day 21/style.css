@@ -1,71 +1,166 @@
-body{
-    overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient( 90deg,rgba(61, 108, 236, 0.486) 0%,
- rgba(252, 1, 76, 0.61)50%, rgba(68, 130, 247, 0.575)100%);
-}
-.calculator-item{
+
+body {
+    background-color: hsl(21, 35%, 92%);
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding-top: 10px;
+    height: 100vh;
+    font-size: 1.2rem;
+    font-family: 'Sora', sans-serif;
+}
+
+main {
+    display: grid;
+    width: 100%;
    
 }
-button{
-    height: 50px;
-    width: 60px;
-    border-radius: 10px;
-    border: rgb(40, 41, 43) 2px solid;
-    background-color: crimson;
-    font-size: 17px;
-    font-weight: bold;
-    color: white;
-    box-shadow: 1px 1px 2px gray;
-}
-input{
-    height:90px ;
+
+.display-con {
     width: 100%;
-    background-color:rgb(1, 1, 24) ;
+    padding: 0 1em;
+}
+
+.calculator-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    gap: 1.2rem;
+    padding: 0.5em 0.2em;
+}
+
+button {
+    padding: 1em;
+    border-radius: 10px;
     border: none;
-    color: white;
+    background-color: transparent;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px 4px hsl(309, 6%, 58%);
+    cursor: pointer;
+    color: hsl(232, 17%, 35%);
+    font-family: 'Sora', sans-serif;
+}
+
+input {
+    height: 8em;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: hsl(232, 17%, 35%);
     outline: none;
     text-align: right;
     font-size: larger;
-    /* box-shadow: 1px 1px 3px gray; */
+    padding: 1em;
+    font-family: "Sora", sans-serif;
+    box-shadow: 1px 1px 4px hsl(309, 6%, 58%);
 }
-.display-con{
-    padding-top: 140px;
-    padding-inline:30px ;
-    padding-bottom: 30px;
-    background-color: rgb(1, 1, 24);
-    border-radius: 50px;
-} 
-.operators{
-    background-color: dodgerblue;
+
+.functions {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: hsl(11, 24%, 72%);
 }
-#clear{
-    background-color: rgb(63, 60, 60);
+
+.functions i {
+    color: hsl(232, 17%, 35%);
 }
-button:hover{
-    background-color: rgb(64, 65, 66);
+
+i {
+    color: hsl(21, 35%, 92%);
+    cursor: pointer;
 }
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px hsl(309, 6%, 58%);
+    margin: 0.5em;
+    color: hsl(232, 17%, 35%);
+}
+#theme-toggle {
+    display: block;
+    text-align: right;
+    border: none;
+    margin: 0.5em ;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 2rem;
+    
+}
+#theme-toggle i{
+    color: hsl(11, 24%, 72%);
+    font-size: 1.5rem;
+    text-align: left;
+}
+body.dark-mode {
+    background-color:hsl(240, 27%, 18%);
+}
+
+#basic-cal,
+#formular-cal {
+    border: none;
+    padding: 0.5em 1.5em;
+}
+
+.active {
+    background-color: hsl(11, 24%, 72%);
+    border-radius: 10px 0 0 10px;
+}
+
+.inactive {
+    border-radius: 0 10px 10px 0;
+    background-color: transparent;
+}
+
+.operators {
+    background-color: hsl(232, 17%, 35%);
+    color: hsl(21, 35%, 92%);
+}
+
+#clear { 
+background-color: hsl(11, 24%, 72%); 
+ }
+
+button:hover,
 .operators:hover{
-     background-color: rgb(64, 65, 66);
+    background-color:hsl(11, 24%, 72%);
 }
-#clear:hover{
-    background-color: darkred;
+
+#clear:hover {
+    background-color:hsl(240, 27%, 18%);
+    color: hsl(21, 35%, 92%);
+    
 }
-button:active{
-    background-color: dodgerblue;
+button:focus {
+transform: scale(0.8);
+box-shadow: none;
 }
-.operators:active{
-     background-color: crimson;
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 500px;
+        margin: 1em auto;
+        padding: 1em 0;
+        border: 1px solid hsl(309, 6%, 58%);
+        display: block;
+    }
+    input{
+        height: 5em;
+    }
+    .calculator-item {
+        gap: 1rem;
+    }
+    
 }
-#clear:active{
-    background-color: crimson;
-}
+
